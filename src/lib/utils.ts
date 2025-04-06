@@ -1,4 +1,4 @@
-import { createClient } from "../../utils/supabase/client";
+import { createClient } from "../lib/supabase/client";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { formatDistanceToNow } from "date-fns";
@@ -197,12 +197,12 @@ export const handleFollow = async ({
 	const studentFollowingList = data[0].following_list;
 	const newStudentFollowing = [...studentFollowingList, id];
 	const newInstructorFollowers = [...followers, userID];
-	
+
 	const { error: studentError } = await supabase
 		.from("students")
 		.update({ following_list: newStudentFollowing })
 		.eq("id", userID);
-	
+
 	if (studentError) {
 		return false;
 	}
@@ -211,7 +211,7 @@ export const handleFollow = async ({
 		.from("instructors")
 		.update({ followers: newInstructorFollowers })
 		.eq("id", id);
-	
+
 	if (instructorError) {
 		return false;
 	}
