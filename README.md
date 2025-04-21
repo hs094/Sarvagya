@@ -1,6 +1,6 @@
 # Sarvagya
 
-Sarvagya is a platform that connects students with instructors, allowing for real-time communication through chat and video calls, as well as content sharing through announcements.
+Sarvagya is a Notion-inspired platform that connects students with instructors, allowing for real-time communication through chat and video calls, as well as content sharing through announcements.
 
 ## Features
 
@@ -11,6 +11,7 @@ Sarvagya is a platform that connects students with instructors, allowing for rea
 - Video calls using Stream Video SDK
 - Announcement creation and management
 - Follow/unfollow functionality
+- Notion-like UI and experience
 
 ## Tech Stack
 
